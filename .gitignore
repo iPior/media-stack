@@ -9,6 +9,8 @@
 !/nginx/
 !/navidrome/
 !/portainer/
+!/homepage/
+!/adguard/
 
 /jellyfin/*
 !/jellyfin/docker-compose.yml
@@ -33,3 +35,21 @@
 
 /portainer/*
 !/portainer/docker-compose.yml
+
+/homepage/*
+!/homepage/docker-compose.yml
+!/homepage/.env.example
+!/homepage/README.md
+!/homepage/config/
+/homepage/config/*
+!/homepage/config/settings.yaml
+!/homepage/config/services.yaml
+!/homepage/config/widgets.yaml
+!/homepage/config/bookmarks.yaml
+!/homepage/config/docker.yaml
+!/homepage/config/kubernetes.yaml
+
+/adguard/*
+!/adguard/docker-compose.yml
+!/adguard/.env.example
+!/adguard/README.md

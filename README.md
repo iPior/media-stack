@@ -10,6 +10,8 @@ is an independent Compose project; there is no root Compose file.
 | `nginx/` | Nginx Proxy Manager, GoAccess | Admin: 81; GoAccess: 7880 |
 | `navidrome/` | Navidrome | 4533 |
 | `portainer/` | Portainer Enterprise | HTTPS: 9443 |
+| `homepage/` | Homepage dashboard | 2999 |
+| `adguard/` | AdGuard Home DNS filtering | Tailscale setup: 3001; admin: 8081; DNS: 53 |
 
 ## What Git preserves
 
@@ -56,11 +58,15 @@ git clone https://github.com/iPior/media-stack.git
 cd media-stack
 cp jellyfin/.env.example jellyfin/.env
 cp immich/.env.example immich/.env
-chmod 600 jellyfin/.env immich/.env
+cp homepage/.env.example homepage/.env
+cp adguard/.env.example adguard/.env
+chmod 600 jellyfin/.env immich/.env homepage/.env adguard/.env
 ```
 
-Edit both `.env` files before starting: set VPN credentials, a unique database
-password, storage paths, and timezone. The root `.env.example` is optional; its
+Edit the `.env` files before starting: set VPN credentials, a unique database
+password, storage paths, timezone, Homepage's server hostname/allowed hosts,
+and AdGuard's LAN/Tailscale interface addresses.
+The root `.env.example` is optional; its
 Cloudflare setting is not referenced by the current Compose files.
 
 Prepare storage directories and permissions. Jellyfin and Navidrome run as
@@ -85,9 +91,13 @@ docker compose ps
 docker compose logs --tail=100 gluetun
 ```
 
-Repeat for `immich`, `nginx`, `navidrome`, and `portainer` as needed. Verify VPN
+Repeat for `immich`, `nginx`, `navidrome`, `portainer`, and `homepage` as needed. See
+[Homepage setup](homepage/README.md) for dashboard configuration. Verify VPN
 connectivity and service health, then complete application setup in their web
 interfaces. Do not start stacks on the existing server merely to initialize Git.
+
+For DNS filtering, follow [AdGuard setup](adguard/README.md). Its interface-bound
+ports require the configured LAN and Tailscale addresses to exist on the server.
 
 ## Save and deploy configuration changes
 

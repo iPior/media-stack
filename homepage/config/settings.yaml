@@ -1,0 +1,19 @@
+title: Media Stack
+description: Media, downloads, and server administration
+theme: dark
+color: slate
+headerStyle: clean
+language: en
+target: _blank
+useEqualHeights: true
+disableIndexing: true
+layout:
+  Media:
+    style: row
+    columns: 4
+  Downloads:
+    style: row
+    columns: 3
+  Administration:
+    style: row
+    columns: 3

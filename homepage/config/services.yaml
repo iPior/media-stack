@@ -1,0 +1,57 @@
+- Media:
+    - Jellyfin:
+        icon: jellyfin.svg
+        href: "https://stream.pior.ca"
+        description: Movies and TV
+    - Seerr:
+        icon: jellyseerr.svg
+        href: "https://browse.pior.ca"
+        description: Media requests
+    - Immich:
+        icon: immich.svg
+        href: "https://immich.pior.ca"
+        description: Photo library
+    - Navidrome:
+        icon: navidrome.svg
+        href: "https://music.pior.ca"
+        description: Music library
+
+- Downloads:
+    - qBittorrent:
+        icon: qbittorrent.svg
+        href: "http://{{HOMEPAGE_VAR_SERVER_HOST}}:8701"
+        description: Downloads
+    - Radarr:
+        icon: radarr.svg
+        href: "https://radarr.pior.ca"
+        description: Movie management
+    - Sonarr:
+        icon: sonarr.svg
+        href: "https://sonarr.pior.ca"
+        description: TV management
+    - Lidarr:
+        icon: lidarr.svg
+        href: "https://lidarr.pior.ca"
+        description: Music management
+    - Bazarr:
+        icon: bazarr.svg
+        href: "https://bazarr.pior.ca"
+        description: Subtitles
+    - Prowlarr:
+        icon: prowlarr.svg
+        href: "https://prowlarr.pior.ca"
+        description: Indexer management
+
+- Administration:
+    - Nginx Proxy Manager:
+        icon: nginx-proxy-manager.svg
+        href: "https://nginx.pior.ca"
+        description: Proxy hosts and certificates
+    - GoAccess:
+        icon: goaccess.svg
+        href: "http://{{HOMEPAGE_VAR_SERVER_HOST}}:7880"
+        description: Proxy access logs
+    - Portainer:
+        icon: portainer.svg
+        href: "https://portainer.pior.ca"
+        description: Container administration

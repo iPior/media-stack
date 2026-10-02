@@ -1,0 +1,15 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    restart: unless-stopped
+    ports:
+      - "${HOMEPAGE_PORT:-2999}:3000"
+    volumes:
+      - ./config:/app/config
+    environment:
+      HOMEPAGE_ALLOWED_HOSTS: ${HOMEPAGE_ALLOWED_HOSTS:-localhost:2999,127.0.0.1:2999}
+      HOMEPAGE_VAR_SERVER_HOST: ${HOMEPAGE_VAR_SERVER_HOST:-localhost}
+      TZ: ${TIMEZONE:-America/Toronto}
+      PUID: ${PUID:-1000}
+      PGID: ${PGID:-1000}
