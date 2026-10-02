@@ -9,7 +9,7 @@ is an independent Compose project; there is no root Compose file.
 | `immich/` | Immich server, machine learning, Valkey, PostgreSQL | 2283 |
 | `nginx/` | Nginx Proxy Manager, GoAccess | Admin: 81; GoAccess: 7880 |
 | `navidrome/` | Navidrome | 4533 |
-| `portainer/` | Portainer Enterprise | HTTPS: 9443 |
+| `portainer/` | Portainer Enterprise | 9443 |
 | `homepage/` | Homepage dashboard | 2999 |
 | `adguard/` | AdGuard Home DNS filtering | Tailscale setup: 3001; admin: 8081; DNS: 53 |
 
